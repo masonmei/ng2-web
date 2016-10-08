@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StatusService } from '../service/global/status.service';
+import { GlobalService } from '../service/global/global.service';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +11,14 @@ export class HeaderComponent implements OnInit {
   private _title:string = "Git Book";
 
   private _currentBook:string = "Choose your Book";
-  private _books: string[] = ["I", "Love", "You!"];
+  private _books: string[] = ["This", "is", "a", "testing", "book", "for", "You!"];
 
   private _sidebarOpened:boolean = true;
   private _sidebarOpenedDataUpdate:any;
 
-  constructor(private statusService: StatusService) {
+  constructor(private globalService: GlobalService) {
     this._books.push('First');
-    this._sidebarOpenedDataUpdate = this.statusService._sidebarToggleDateUpdate;
+    this._sidebarOpenedDataUpdate = this.globalService._sidebarToggleDateUpdate;
   }
 
   ngOnInit() {
@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar():void {
     this._sidebarOpened = !this._sidebarOpened;
-    this.statusService._sidebarToggle = this._sidebarOpened;
-    this.statusService._sidebarToggleDateUpdate.emit();
+    this.globalService._sidebarToggle = this._sidebarOpened;
+    this.globalService._sidebarToggleDateUpdate.emit();
   }
 
 }

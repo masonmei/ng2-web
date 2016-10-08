@@ -16,7 +16,7 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 
 // service section
 import { BookService } from './shared/service/book/book.service';
-import { StatusService } from './shared/service/global/status.service';
+import { GlobalService } from './shared/service/global/global.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { StatusService } from './shared/service/global/status.service';
     MaterialModule.forRoot(),
     Ng2WebRoutingModule
   ],
-  providers: [BookService, StatusService],
+  providers: [BookService, GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
