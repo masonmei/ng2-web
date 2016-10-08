@@ -13,11 +13,9 @@ export class HeaderComponent implements OnInit {
   private _currentBook:string = "Choose your Book";
   private _books: string[] = ["This", "is", "a", "testing", "book", "for", "You!"];
 
-  private _sidebarOpened:boolean = true;
   private _sidebarOpenedDataUpdate:any;
 
   constructor(private globalService: GlobalService) {
-    this._books.push('First');
     this._sidebarOpenedDataUpdate = this.globalService._sidebarToggleDateUpdate;
   }
 
@@ -29,8 +27,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleSidebar():void {
-    this._sidebarOpened = !this._sidebarOpened;
-    this.globalService._sidebarToggle = this._sidebarOpened;
     this.globalService._sidebarToggleDateUpdate.emit();
   }
 

@@ -13,6 +13,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BooksComponent } from './component/books/books.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { BookDetailComponent } from './component/book-detail/book-detail.component';
 
 // service section
 import { BookService } from './shared/service/book/book.service';
@@ -24,7 +25,8 @@ import { GlobalService } from './shared/service/global/global.service';
     HeaderComponent,
     FooterComponent,
     BooksComponent,
-    SidenavComponent
+    SidenavComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
