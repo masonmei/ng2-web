@@ -16,11 +16,33 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.bookService
-      .getAll()
-      .subscribe(bs => this._books = bs,
-        e => this._errorMessage = e,
-        () => this._isBookLoading = false);
+    // this.bookService
+    //   .getAll()
+    //   .subscribe(bs => this._books = bs,
+    //     e => this._errorMessage = e,
+    //     () => this._isBookLoading = false);
+    this._books = JSON.parse(`
+      [
+  {
+    "id": 1,
+    "repository": "https://github.com/masonmei/mason-demo.git",
+    "relativePath": "mason/demo",
+    "tagName": "demo",
+    "refreshInterval": 10000,
+    "repositoryType": "GITHUB_PUBLIC",
+    "repositoryStatus": "INITIALIZED"
+  },
+  {
+    "id": 2,
+    "repository": "https://github.com/masonmei/Testing.git",
+    "relativePath": "mason/Testing",
+    "tagName": "醉西厢",
+    "refreshInterval": 10000,
+    "repositoryType": "GITHUB_PUBLIC",
+    "repositoryStatus": "INITIALIZED"
+  }
+]
+    `);
   }
 
 }
