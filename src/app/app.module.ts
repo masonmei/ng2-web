@@ -18,6 +18,7 @@ import { BookDetailComponent } from './component/book-detail/book-detail.compone
 // service section
 import { BookService } from './shared/service/book/book.service';
 import { GlobalService } from './shared/service/global/global.service';
+import { TreeItemComponent } from './shared/tree-item/tree-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GlobalService } from './shared/service/global/global.service';
     FooterComponent,
     BooksComponent,
     SidenavComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    TreeItemComponent
   ],
   imports: [
     BrowserModule,

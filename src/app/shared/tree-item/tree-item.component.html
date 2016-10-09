@@ -1,0 +1,8 @@
+<div *ngIf="_menuItem">
+  <a md-list-item>
+    <span md-line>{{_menuItem.name}}</span>
+  </a>
+  <div *ngIf="_menuItem.children && _menuItem.children.length > 0">
+    <app-tree-item *ngFor="let mi of _menuItem.children" [_menuItem]="mi"></app-tree-item>
+  </div>
+</div>

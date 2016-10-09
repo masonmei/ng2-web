@@ -1,13 +1,4 @@
 <md-nav-list>
-  <div md-list-item>
-    <a md-list-item>
-      <md-icon md-list-icon>room</md-icon>
-      <span md-line>Add a location</span>
-    </a>
-    <a md-list-item>
-      <md-icon md-list-icon>home</md-icon>
-      <span md-line>About Weather App</span>
-    </a>
-  </div>
+  <app-tree-item *ngFor="let _menu of _menuItems" [_menuItem]="_menu"></app-tree-item>
 </md-nav-list>
 
