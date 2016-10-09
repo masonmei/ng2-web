@@ -9,3 +9,7 @@
 .app-content md-checkbox {
   margin: 10px;
 }
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}

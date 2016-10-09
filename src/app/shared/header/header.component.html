@@ -1,16 +1,9 @@
-<md-toolbar color="primary">
-  <button md-icon-button (click)="toggleSidebar()">
-    <md-icon class="md-24">menu</md-icon>
-  </button>
-  {{_title}}
-  <span class="app-toolbar-filler"></span>
-  <button md-button [md-menu-trigger-for]="books">
-    {{_currentBook}}
-  </button>
-  <button md-icon-button>
-    <md-icon>more_vert</md-icon>
-  </button>
-</md-toolbar>
+<button md-button [md-menu-trigger-for]="books">
+  {{_currentBook}}
+</button>
+<button md-icon-button>
+  <md-icon>more_vert</md-icon>
+</button>
 
 <md-menu x-position="before" #menu="mdMenu">
   <button md-menu-item>Help</button>

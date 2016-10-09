@@ -11,8 +11,8 @@ import { Ng2WebRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { BooksComponent } from './component/books/books.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { BooksComponent } from './component/books/books.component';
 import { BookDetailComponent } from './component/book-detail/book-detail.component';
 
 // service section
