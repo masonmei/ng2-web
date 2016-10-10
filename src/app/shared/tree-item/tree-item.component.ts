@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from "@angular/core";
 import {MenuItem} from "../model/book";
 
 @Component({
@@ -8,11 +8,22 @@ import {MenuItem} from "../model/book";
 })
 export class TreeItemComponent implements OnInit {
 
-  @Input() _menuItem: MenuItem;
+  @Input() _menuItem:MenuItem;
+  @Input() _idxPrefix:string;
+  @Input() _idx:number;
+  private _fullIdx:string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    this._fullIdx = this.buildIdx();
+  }
+
+  buildIdx():string {
+    if (this._idxPrefix != null) {
+      return this._idxPrefix + '.' + (this._idx + 1);
+    }
+    return '' + (this._idx + 1);
+  }
 }

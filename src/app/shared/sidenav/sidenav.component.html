@@ -1,4 +1,4 @@
 <md-nav-list>
-  <app-tree-item *ngFor="let _menu of _menuItems" [_menuItem]="_menu"></app-tree-item>
+  <app-tree-item *ngFor="let _menu of _menuItems; let idx = index;" [_menuItem]="_menu" [_idx]="idx"></app-tree-item>
 </md-nav-list>
 
